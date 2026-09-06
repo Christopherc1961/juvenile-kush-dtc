@@ -1,3 +1,5 @@
+import { media } from "./media";
+
 export type Category = "bats" | "grinders" | "trays" | "hats" | "tees" | "kits";
 
 export type Variant = {
@@ -43,7 +45,7 @@ const BAT_MATERIALS = [
   "For legal herb consumers. Does not contain cannabis, nicotine, or tobacco.",
 ];
 
-export const products: Product[] = [
+const catalog: Product[] = [
   {
     slug: "big-hit-station",
     name: "Big Hit Station",
@@ -549,6 +551,11 @@ export const products: Product[] = [
     ],
   },
 ];
+
+export const products: Product[] = catalog.map((p) => ({
+  ...p,
+  images: p.images.map(media),
+}));
 
 const bySlug = new Map(products.map((p) => [p.slug, p]));
 

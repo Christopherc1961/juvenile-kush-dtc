@@ -11,6 +11,7 @@ import {
   type Product,
 } from "@/lib/catalog";
 import { formatMoney } from "@/lib/money";
+import { media } from "@/lib/media";
 import { useCart } from "@/lib/cart";
 import { ProductCard } from "./product-card";
 import { SlowMotionPlayer } from "./slow-motion";
@@ -55,7 +56,7 @@ export function Landing() {
       <section className="grain relative border-b border-border">
         <div className="absolute inset-0">
           <img
-            src="/brand/hero-still.jpg"
+            src={media("/brand/hero-still.jpg")}
             alt=""
             className="h-full w-full object-cover opacity-40"
           />
@@ -104,21 +105,21 @@ export function Landing() {
           <div className="relative pb-10">
             <div className="overflow-hidden rounded-xl bg-paper p-3">
               <img
-                src="/products/bats-100-king-a.jpg"
+                src={media("/products/bats-100-king-a.jpg")}
                 alt="100ct King Size Juvenile Bats"
                 className="aspect-square w-full object-contain"
               />
             </div>
             <div className="absolute -bottom-6 -left-2 hidden w-36 overflow-hidden rounded-lg border border-border bg-paper shadow-lg md:block md:w-44">
               <img
-                src="/products/bats-gold-a.jpg"
+                src={media("/products/bats-gold-a.jpg")}
                 alt="Gold Bats"
                 className="aspect-square w-full object-contain p-2"
               />
             </div>
             <div className="absolute -right-2 top-8 hidden w-32 overflow-hidden rounded-lg border border-border bg-paper shadow-lg md:block md:w-40">
               <img
-                src="/products/grinder-camo-a.jpg"
+                src={media("/products/grinder-camo-a.jpg")}
                 alt="Camo grinder"
                 className="aspect-square w-full object-contain p-2"
               />
@@ -133,7 +134,7 @@ export function Landing() {
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div className="overflow-hidden rounded-lg bg-ink">
             <img
-              src="/brand/big-hit-tip.jpg"
+              src={media("/brand/big-hit-tip.jpg")}
               alt="Close-up of the Big Hit Tip mouthpiece"
               className="aspect-[4/3] w-full object-cover opacity-95"
             />
@@ -225,7 +226,7 @@ export function Landing() {
         </div>
         <div className="overflow-hidden rounded-xl bg-paper p-3">
           <img
-            src="/products/tee-gold-a.jpg"
+            src={media("/products/tee-gold-a.jpg")}
             alt="Juvenile × Kush gold foil tee"
             className="aspect-square w-full object-contain"
           />
