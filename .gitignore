@@ -1,0 +1,11 @@
+node_modules
+screenshots
+artifacts
+attachments
+.tmp
+.vercel
+*.log
+/tmp
+.grok/skills
+.grok/references
+.grok/preview.log
